@@ -3,11 +3,9 @@
   将url的传参参数形式的字符串转化为json对象格式
 
   let param = 'school=gongda&hobby=skating&number=3'
-
   let jsonObj = queryToObj(param)
 
   console.log(jsonObj)
-
   输出：{
           school: 'gongda',
           hobby: 'skaing',
@@ -57,7 +55,32 @@ function toQueryString(obj) {
 }
 
 
+/*
+  直接取url中的参数转为json（或者不转）
+  用法：
+   let para = urlToJson()
+   console.log(para)
+
+* */
+function urlToJson () {
+  const url = window.location.href
+
+  const reg = /\?.*$/ // 正则取'？后的参数'
+  const urlMatch = url.match(reg)
+
+  // 匹配去掉？的纯参数(正则精髓，贪婪永远匹配最后一个？后的参数)
+  const param = urlMatch && urlMatch.length ? urlMatch[0].replace(/^\?*.*\?/, '') : ''
+
+  const output = {
+    paramStr: param,
+    paramJson: queryToObj(param)
+  }
+
+  return output
+}
+
 export {
   queryToObj,
-  toQueryString
+  toQueryString,
+  urlToJson
 }
