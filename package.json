@@ -1,7 +1,7 @@
 {
-  "name": "cao_tour",
+  "name": "{{name}}",
   "version": "1.0.4",
-  "description": "the useful function of js",
+  "description": "{{description}}",
   "main": "dist/index.js",
   "directories": {
     "example": "example"
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/Caofh/cao_tour.git"
   },
-  "author": "Topay",
+  "author": "{{author}}",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Caofh/cao_tour/issues"
