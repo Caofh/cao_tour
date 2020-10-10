@@ -19,7 +19,8 @@
     "url": "https://github.com/Caofh/cao_tour/issues"
   },
   "homepage": "https://github.com/Caofh/cao_tour#readme",
-  "dependencies": {},
-  "devDependencies": {
-  }
+  "dependencies": {
+    "jquery": "^3.5.1"
+  },
+  "devDependencies": {}
 }
